@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arasiyal Pazhaguvom - The New Democracy</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/register.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Luxury Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Background Flares & Ambient Elements -->
+    <div class="ambient-glow cyan-glow-1"></div>
+    <div class="ambient-glow cyan-glow-2"></div>
+
+    <!-- Navigation Header -->
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo-container">
+        <div class="logo-circle">
+          <img src="refer/Logo_new_output1.png" alt="TND Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <span>THE NEW DEMOCRACY</span>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="home.html#about" class="nav-link">About Us</a></li>
+        <li><a href="home.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#register" class="nav-btn">
+          REGISTER NOW <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon theme-toggle-icon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <canvas id="gold-dust-canvas" class="gold-dust-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-emblem">
+                <svg viewBox="0 0 100 100" class="emblem-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10L15 32H85L50 10Z" fill="url(#gold-grad)" />
+                    <rect x="22" y="38" width="8" height="32" fill="url(#gold-grad)" />
+                    <rect x="40" y="38" width="8" height="32" fill="url(#gold-grad)" />
+                    <rect x="58" y="38" width="8" height="32" fill="url(#gold-grad)" />
+                    <rect x="76" y="38" width="8" height="32" fill="url(#gold-grad)" />
+                    <rect x="10" y="75" width="80" height="8" fill="url(#gold-grad)" />
+                    <rect x="10" y="85" width="80" height="5" fill="url(#gold-grad)" />
+                    <!-- Flag on top of emblem -->
+                    <path d="M50 10V4H58V8H50" stroke="url(#gold-grad)" stroke-width="1.5" fill="url(#gold-grad)" />
+                </svg>
+            </div>
+            <h1 class="hero-title">ARASIYAL<br>PAZHAGUVOM</h1>
+            <p class="hero-subtitle">MASTER POLITICAL SCIENCE & STRATEGY</p>
+            <div class="hero-separator"></div>
+            <div class="hero-actions">
+                <a href="#register" class="hero-cta-btn">ENROLL NOW</a>
+            </div>
+            <div class="accent-line hero-line"></div>
+        </div>
+    </section>
+
+    <!-- Course Information Section -->
+    <section class="courses-section" id="courses">
+        <div class="accent-line courses-left-line"></div>
+        <div class="accent-line courses-right-line"></div>
+        <div class="container">
+            <h2 class="section-title reveal">COURSE INFORMATION</h2>
+            
+            <div class="courses-grid">
+                <!-- Card 1: Political Theory -->
+                <div class="course-card reveal">
+                    <div class="card-icon-container">
+                        <!-- Book + Laurel Wreath -->
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" class="card-icon">
+                            <!-- Laurels -->
+                            <path d="M25 65C20 55 20 40 30 30" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M75 65C80 55 80 40 70 30" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="21" cy="50" r="3" fill="url(#gold-grad)"/>
+                            <circle cx="25" cy="38" r="3" fill="url(#gold-grad)"/>
+                            <circle cx="79" cy="50" r="3" fill="url(#gold-grad)"/>
+                            <circle cx="75" cy="38" r="3" fill="url(#gold-grad)"/>
+                            <!-- Book -->
+                            <path d="M35 40h13v30H35z" stroke="url(#gold-grad)" stroke-width="3"/>
+                            <path d="M52 40h13v30H52z" stroke="url(#gold-grad)" stroke-width="3"/>
+                            <path d="M35 70c8 0 17-2 17-5c0 3 9 5 17 5" stroke="url(#gold-grad)" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-card-title">POLITICAL THEORY</h3>
+                    <p class="course-card-desc">Foundational ideas and non-ideologies. For foundational ideas and ideologies.</p>
+                </div>
+
+                <!-- Card 2: Public Policy -->
+                <div class="course-card reveal">
+                    <div class="card-icon-container">
+                        <!-- Gavel + Shield -->
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" class="card-icon">
+                            <!-- Shield -->
+                            <path d="M50 20s22 5 22 25c0 20-22 35-22 35S28 65 28 45c0-20 22-25 22-25z" stroke="url(#gold-grad)" stroke-width="3"/>
+                            <!-- Gavel -->
+                            <path d="M40 38l12 12M43 35l6 6M38 40l6 6" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M32 58l22-22" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-card-title">PUBLIC POLICY</h3>
+                    <p class="course-card-desc">Policy analysis analysts and development to public policy analysis and development.</p>
+                </div>
+
+                <!-- Card 3: Campaign Strategy -->
+                <div class="course-card reveal">
+                    <div class="card-icon-container">
+                        <!-- Megaphone + Map -->
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" class="card-icon">
+                            <!-- Megaphone -->
+                            <path d="M35 55l10-5V35l-10-5v25z" stroke="url(#gold-grad)" stroke-width="3"/>
+                            <path d="M45 35l15-7v29l-15-7" stroke="url(#gold-grad)" stroke-width="3"/>
+                            <path d="M30 45h5M30 50v10" stroke="url(#gold-grad)" stroke-width="3"/>
+                            <!-- Map Pin/Globe element -->
+                            <circle cx="68" cy="45" r="10" stroke="url(#gold-grad)" stroke-width="3"/>
+                            <path d="M68 35v20M58 45h20" stroke="url(#gold-grad)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-card-title">CAMPAIGN STRATEGY</h3>
+                    <p class="course-card-desc">Political communication and campaigning to morestine to eomnomyies.</p>
+                </div>
+
+                <!-- Card 4: Governance & Ethics -->
+                <div class="course-card reveal">
+                    <div class="card-icon-container">
+                        <!-- Scale of Justice -->
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" class="card-icon">
+                            <path d="M50 20v60M30 80h40M32 30h36" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Balance Left -->
+                            <path d="M32 30L22 55h20L32 30z" stroke="url(#gold-grad)" stroke-width="2.5"/>
+                            <!-- Balance Right -->
+                            <path d="M68 30L58 55h20L68 30z" stroke="url(#gold-grad)" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-card-title">GOVERNANCE & ETHICS</h3>
+                    <p class="course-card-desc">Leadership and ethical and rerdorship, leadership and ethical practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Accordion Section -->
+    <section class="curriculum-section" id="curriculum">
+        <div class="container">
+            <h2 class="section-title reveal">CURRICULUM SYLLABUS</h2>
+            <div class="accordion-container reveal">
+                <!-- Module 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="module-number">MODULE 01</span>
+                        <span class="module-title">Foundations of Political Philosophy</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Explore classic and modern political thought, key ideologies (liberalism, socialism, conservatism, nationalism), and the philosophical foundations of human rights and justice systems.</p>
+                            <ul class="accordion-list">
+                               <li>Social Contract Theories (Hobbes, Locke, Rousseau)</li>
+                               <li>Modern Ideologies and Post-Colonial thought</li>
+                               <li>Ethics in political action and decision-making</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="module-number">MODULE 02</span>
+                        <span class="module-title">Public Policy Analysis & Formulation</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Analyze how policies are created, evaluated, and implemented. Study economic models, administrative challenges, and the impact of public opinion on policy choices.</p>
+                            <ul class="accordion-list">
+                               <li>Policy Cycle: Formulation to Evaluation</li>
+                               <li>Quantitative and Qualitative Research Methods</li>
+                               <li>Case studies of successful and failed policies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="module-number">MODULE 03</span>
+                        <span class="module-title">Modern Campaign Strategy & Communications</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Master the tools of contemporary political communication, digital campaign design, polling methodology, public relations, and narrative crafting.</p>
+                            <ul class="accordion-list">
+                               <li>Digital campaigning and targeted messaging</li>
+                               <li>Crisis communication and media relations</li>
+                               <li>Polling data analysis and voter behavior</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="module-number">MODULE 04</span>
+                        <span class="module-title">Governance, Ethics & Constitutional Law</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Examine democratic institutions, constitutional principles, legislative procedures, and the ethical responsibilities of political leaders.</p>
+                            <ul class="accordion-list">
+                               <li>Constitutional separation of powers</li>
+                               <li>Anti-corruption frameworks and compliance</li>
+                               <li>Democratic renewal and citizen participation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Quote Section -->
+    <section class="quote-section reveal">
+        <div class="container">
+            <div class="quote-container">
+                <span class="quote-icon">“</span>
+                <blockquote class="quote-text">
+                    Democracy is not merely a form of government; it is primarily a mode of associated living, of conjoint communicated experience.
+                </blockquote>
+                <cite class="quote-author">— Dr. B.R. Ambedkar</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section" id="register">
+        <div class="container">
+            <div class="registration-grid">
+                <!-- Left Column: Registration Information -->
+                <div class="registration-info reveal">
+                    <span class="registration-tag">REGISTRATION</span>
+                    <h2 class="registration-headline">Join the Institute</h2>
+                    <p class="registration-text">Begin your journey towards political literacy and ethical leadership. Fill out the application, and our admissions team will contact you for a personal interview.</p>
+                    <ul class="registration-bullets">
+                        <li><span class="checkmark">✓</span> Two-dimensional framework of Governance</li>
+                        <li><span class="checkmark">✓</span> Public Policy, Politics & Advocacy</li>
+                        <li><span class="checkmark">✓</span> Leadership & Active Citizenship</li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Registration Form Card -->
+                <div class="registration-form-card reveal">
+                    <h3 class="form-title">Apply Now</h3>
+                    <form id="enrollment-form" class="enrollment-form">
+                        <div class="form-group">
+                            <label for="full-name">FULL NAME</label>
+                            <input type="text" id="full-name" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email-address">EMAIL ADDRESS</label>
+                            <input type="email" id="email-address" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="select-course">SELECT COURSE</label>
+                            <select id="select-course" required>
+                                <option value="" disabled selected>Choose a course</option>
+                                <option value="theory">POLITICAL THEORY</option>
+                                <option value="policy">PUBLIC POLICY</option>
+                                <option value="campaign">CAMPAIGN STRATEGY</option>
+                                <option value="ethics">GOVERNANCE & ETHICS</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sop">STATEMENT OF PURPOSE (OPTIONAL)</label>
+                            <textarea id="sop" rows="2" placeholder="Why do you want to join The New Democracy?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Submit Application</button>
+                        <div id="form-feedback" class="form-feedback-alert">Enrolled Successfully! We will contact you shortly.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- Footer Wrapper -->
+    <footer class="footer-wrapper" id="contact">
+      
+      <!-- Top banner banner -->
+      <div class="footer-top-banner">
+        <div class="footer-top-banner-content">
+          <h2>BE A PART OF THE CHANGE</h2>
+          <p>Join thousands of citizens building a better tomorrow.</p>
+        </div>
+        <a href="#register" class="btn-pill btn-pill-gold">
+          REGISTER NOW <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Main Columns -->
+      <div class="footer-main-columns">
+        
+        <!-- Contact Info -->
+        <div class="footer-col-contact">
+          <h3>GET IN TOUCH</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 12345 67890</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>hello@thenewdemocracy.in</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Chennai, Tamil Nadu, India</span>
+            </li>
+          </ul>
+          
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook" class="social-icon-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="Twitter X" class="social-icon-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M20 20l-6.768 -6.768"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-icon-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-icon-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-icon-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Navigation Links -->
+        <div class="footer-col-links">
+          <div class="footer-links-subcol">
+            <h4>QUICK LINKS</h4>
+            <ul class="footer-link-list">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#initiatives">What We Do</a></li>
+              <li><a href="#programme">Program Structure</a></li>
+              <li><a href="#founders">Founders</a></li>
+              <li><a href="#">Board Members</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-subcol">
+            <h4>LEGAL</h4>
+            <ul class="footer-link-list">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Enrollment Form -->
+        <div class="footer-col-news">
+          <div class="registration-form-card">
+            <h3 class="form-title">Apply Now</h3>
+            <form id="enrollment-form" class="enrollment-form">
+              <div class="form-group">
+                <label for="full-name">FULL NAME</label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email-address">EMAIL ADDRESS</label>
+                <input type="email" id="email-address" placeholder="Enter your email address" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="select-course">SELECT COURSE</label>
+                <select id="select-course" required>
+                  <option value="" disabled selected>Choose a course</option>
+                  <option value="theory">POLITICAL THEORY</option>
+                  <option value="policy">PUBLIC POLICY</option>
+                  <option value="campaign">CAMPAIGN STRATEGY</option>
+                  <option value="ethics">GOVERNANCE & ETHICS</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sop">STATEMENT OF PURPOSE (OPTIONAL)</label>
+                <textarea id="sop" rows="2" placeholder="Why do you want to join The New Democracy?"></textarea>
+              </div>
+              
+              <button type="submit" class="submit-button">Submit Application</button>
+              <div id="form-feedback" class="form-feedback-alert">Enrolled Successfully! We will contact you shortly.</div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom metadata -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 The New Democracy. All rights reserved.</p>
+        <div class="footer-meta-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Engagement</a>
+          <a href="#">Contact Support</a>
+        </div>
+      </div>
+
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919445390910" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="scroll-top-icon">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Globally shared Gold gradient definition -->
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F2C94C" />
+            <stop offset="50%" stop-color="#D4AF37" />
+            <stop offset="100%" stop-color="#AA8524" />
+        </linearGradient>
+    </svg>
+
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

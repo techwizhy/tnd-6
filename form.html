@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enroll in The New Democracy's Political Literacy Initiative to master constitutional systems, public policy, and leadership strategy.">
+  <title>Enrollment Form | The New Democracy</title>
+  
+  <!-- Custom Redesigned Stylesheet -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/home.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark-theme');
+      }
+    })();
+  </script>
+
+  <style>
+    .form-page-split {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .registration-section {
+      background-color: #E2ECE9 !important; /* Soft, warm light grey-green background matching Pinterest canvas */
+      transition: background-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .dark-theme .registration-section {
+      background-color: #060e10 !important;
+    }
+
+    /* Soft background gradient blobs */
+    .bg-blob-1 {
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 45%;
+      height: 45%;
+      background: radial-gradient(circle, rgba(242, 201, 76, 0.25) 0%, rgba(242, 201, 76, 0) 70%);
+      pointer-events: none;
+      filter: blur(40px);
+      z-index: 1;
+    }
+
+    .bg-blob-2 {
+      position: absolute;
+      bottom: -10%;
+      right: -10%;
+      width: 50%;
+      height: 50%;
+      background: radial-gradient(circle, rgba(0, 168, 181, 0.15) 0%, rgba(0, 168, 181, 0) 70%);
+      pointer-events: none;
+      filter: blur(50px);
+      z-index: 1;
+    }
+
+    /* 3D Layout Panels */
+    .layout-panel-3d {
+      background: #faf8f5;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 
+        10px 15px 35px rgba(15, 58, 52, 0.05),
+        -8px -8px 20px rgba(255, 255, 255, 0.9),
+        inset 1px 1px 0px rgba(255, 255, 255, 0.8);
+      padding: 2.2rem;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .dark-theme .layout-panel-3d {
+      background: rgba(14, 28, 30, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 
+        15px 25px 50px rgba(0, 0, 0, 0.4),
+        -5px -5px 15px rgba(255, 255, 255, 0.02),
+        inset 1px 1px 0px rgba(255, 255, 255, 0.05);
+    }
+
+    /* Overlapping Diagonal Diamond Panel */
+    .diamond-panel-3d {
+      background: linear-gradient(135deg, #0f3a34 0%, #061f1c 100%) !important;
+      border-radius: 80px 24px 80px 24px !important;
+      border: 1.5px solid rgba(212, 164, 55, 0.3) !important;
+      box-shadow: 
+        12px 18px 40px rgba(0, 0, 0, 0.18),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.15) !important;
+      padding: 2rem !important;
+      color: #ffffff !important;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diamond-panel-3d::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 50%);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+
+    /* Orange Decorative Accent Panel */
+    .accent-orange-panel {
+      background: linear-gradient(135deg, #f2994a 0%, #e07a1b 100%);
+      border-radius: 24px 80px 24px 80px;
+      box-shadow: 
+        10px 15px 35px rgba(224, 122, 27, 0.2),
+        inset 1px 1px 0px rgba(255, 255, 255, 0.3);
+      padding: 2rem;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* Custom Asymmetric Panels */
+    .panel-intro-3d {
+      border-radius: 40px 40px 8px 40px !important;
+    }
+
+    .panel-features-3d {
+      border-radius: 8px 40px 40px 40px !important;
+    }
+
+    /* 3D Glossy Status Pills */
+    .glossy-pill-3d {
+      background: linear-gradient(135deg, #00c6d7 0%, #00a8b5 100%);
+      border-radius: 50px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 
+        4px 6px 12px rgba(0, 0, 0, 0.15),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glossy-pill-3d::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 15%;
+      width: 70%;
+      height: 35%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+      border-radius: 50px;
+      pointer-events: none;
+    }
+
+    .glossy-pill-3d.white {
+      background: linear-gradient(135deg, #ffffff 0%, #eef2f3 100%);
+      color: var(--primary-dark);
+    }
+    
+    .glossy-pill-3d.green {
+      background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    }
+
+    /* Clean overrides for form.html registration form card */
+    .registration-form-card {
+      background: linear-gradient(135deg, #fdfbf7 0%, #f4eee1 100%) !important;
+      border: 2px solid rgba(255, 255, 255, 0.8) !important;
+      border-radius: 80px 24px 80px 24px !important;
+      padding: 2.5rem !important;
+      box-shadow: 
+        18px 24px 50px rgba(10, 38, 34, 0.12),
+        -12px -12px 30px rgba(255, 255, 255, 0.95),
+        inset 1.5px 1.5px 0px rgba(255, 255, 255, 0.9) !important;
+      position: relative !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    
+    /* Top accent border */
+    .registration-form-card::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 10% !important;
+      width: 80% !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, rgba(212, 164, 55, 0) 0%, rgba(212, 164, 55, 1) 50%, rgba(212, 164, 55, 0) 100%) !important;
+      box-shadow: 0 0 10px rgba(212, 164, 55, 0.5) !important;
+    }
+
+    .form-title {
+      font-size: 1.8rem !important;
+      font-weight: 700 !important;
+      color: var(--primary-dark) !important;
+      margin-bottom: 1.8rem !important;
+      text-align: center !important;
+    }
+
+    .registration-section .form-group label {
+      color: var(--primary-dark) !important;
+      font-weight: 700 !important;
+      font-size: 0.78rem !important;
+      letter-spacing: 1px !important;
+    }
+
+    .registration-section .form-group input,
+    .registration-section .form-group select,
+    .registration-section .form-group textarea {
+      background: #E2ECE9 !important; /* Perfect neumorphic inset color */
+      border: 1px solid rgba(0, 0, 0, 0.04) !important;
+      color: var(--primary-dark) !important;
+      border-radius: 12px !important;
+      padding: 0.85rem 1.2rem !important;
+      font-size: 0.92rem !important;
+      box-shadow: 
+        inset 3px 3px 6px rgba(0, 0, 0, 0.08),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.9) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .registration-section .form-group input::placeholder,
+    .registration-section .form-group textarea::placeholder {
+      color: rgba(15, 58, 52, 0.45) !important;
+    }
+
+    .registration-section .form-group input:focus,
+    .registration-section .form-group select:focus,
+    .registration-section .form-group textarea:focus {
+      border-color: rgba(0, 168, 181, 0.4) !important;
+      box-shadow: 
+        inset 1px 1px 3px rgba(0, 0, 0, 0.06),
+        0 0 10px rgba(0, 168, 181, 0.15) !important;
+      background: #ffffff !important;
+    }
+
+    /* Phone Prefix Style */
+    .phone-prefix {
+      background: #E2ECE9 !important;
+      border: 1px solid rgba(0, 0, 0, 0.04) !important;
+      padding: 0.85rem 1.2rem !important;
+      border-radius: 12px !important;
+      font-weight: 700 !important;
+      font-size: 0.92rem !important;
+      color: var(--primary-dark) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      height: 48px !important;
+      box-sizing: border-box !important;
+      box-shadow: 
+        inset 3px 3px 6px rgba(0, 0, 0, 0.08),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* Gender Custom Buttons Group */
+    .gender-btn-group {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+    
+    .gender-btn {
+      flex: 1;
+      padding: 12px !important;
+      background: #faf8f5 !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+      color: var(--primary-dark) !important;
+      border-radius: 12px !important;
+      font-size: 0.92rem !important;
+      font-weight: 600 !important;
+      cursor: pointer !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      text-align: center !important;
+      outline: none !important;
+      box-shadow: 
+        3px 4px 10px rgba(15, 58, 52, 0.05),
+        -3px -3px 8px rgba(255, 255, 255, 0.8),
+        inset 1px 1px 0px rgba(255, 255, 255, 0.5) !important;
+    }
+    
+    .gender-btn:hover {
+      transform: translateY(-1px) !important;
+    }
+
+    .gender-btn.active {
+      background: var(--primary-dark) !important;
+      color: #ffffff !important;
+      border-color: var(--primary-dark) !important;
+      box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 2px rgba(255, 255, 255, 0.1) !important;
+      transform: translateY(1px) !important;
+    }
+
+    .registration-section .submit-button {
+      background: linear-gradient(135deg, #f2994a 0%, #e07a1b 100%) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      padding: 15px !important;
+      border-radius: 12px !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px !important;
+      cursor: pointer !important;
+      box-shadow: 
+        0 6px 20px rgba(224, 122, 27, 0.35),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.1) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      min-height: 48px !important;
+      display: block !important;
+      width: 100% !important;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .registration-section .submit-button::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 10%;
+      width: 80%;
+      height: 30%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+      border-radius: 50px;
+      pointer-events: none;
+    }
+
+    .registration-section .submit-button:hover {
+      background: linear-gradient(135deg, #f2ad5b 0%, #e6882c 100%) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 
+        0 10px 25px rgba(224, 122, 27, 0.45),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .registration-section .submit-button:active {
+      transform: translateY(1px) !important;
+      box-shadow: 
+        0 2px 8px rgba(224, 122, 27, 0.2),
+        inset 2px 2px 4px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Dark Mode Overrides */
+    .dark-theme .registration-form-card {
+      background: linear-gradient(135deg, #092225 0%, #051c1c 100%) !important;
+      border: 2px solid rgba(255, 255, 255, 0.05) !important;
+      box-shadow: 
+        20px 30px 60px rgba(0, 0, 0, 0.65), 
+        inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.08),
+        inset -1.5px -1.5px 2px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .dark-theme .registration-form-card::before {
+      background: linear-gradient(90deg, rgba(0, 200, 220, 0) 0%, rgba(0, 200, 220, 1) 50%, rgba(0, 200, 220, 0) 100%) !important;
+      box-shadow: 0 0 10px rgba(0, 200, 220, 0.8) !important;
+    }
+
+    .dark-theme .form-title {
+      color: #ffffff !important;
+    }
+
+    .dark-theme .registration-section .form-group label {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .dark-theme .registration-section .form-group:focus-within label {
+      color: #D4AF37 !important;
+    }
+
+    .dark-theme .registration-section .form-group input,
+    .dark-theme .registration-section .form-group select,
+    .dark-theme .registration-section .form-group textarea {
+      background: #040c0d !important;
+      border: 1px solid rgba(255, 255, 255, 0.03) !important;
+      color: #ffffff !important;
+      box-shadow: 
+        inset 3px 3px 6px rgba(0, 0, 0, 0.45),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .dark-theme .phone-prefix {
+      background: #040c0d !important;
+      border: 1px solid rgba(255, 255, 255, 0.03) !important;
+      color: #ffffff !important;
+      box-shadow: 
+        inset 3px 3px 6px rgba(0, 0, 0, 0.45),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .dark-theme .gender-btn {
+      background: #0d1a1b !important;
+      border: 1px solid rgba(255, 255, 255, 0.03) !important;
+      color: #ffffff !important;
+      box-shadow: 
+        3px 4px 8px rgba(0, 0, 0, 0.3),
+        -2px -2px 6px rgba(255, 255, 255, 0.01) !important;
+    }
+    
+    .dark-theme .gender-btn.active {
+      background: var(--gold-metallic) !important;
+      color: #000000 !important;
+      border-color: var(--gold-metallic) !important;
+      box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 2px rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dark-theme .registration-section .form-group input::placeholder,
+    .dark-theme .registration-section .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .dark-theme .registration-section .form-group input:focus,
+    .dark-theme .registration-section .form-group select:focus,
+    .dark-theme .registration-section .form-group textarea:focus {
+      background: #071618 !important;
+      border-color: rgba(0, 200, 220, 0.4) !important;
+      box-shadow: 
+        inset 1px 1px 3px rgba(0, 0, 0, 0.4),
+        0 0 10px rgba(0, 200, 220, 0.25) !important;
+    }
+
+    .dark-theme .registration-section .submit-button {
+      background: linear-gradient(135deg, #F2C94C 0%, #D4AF37 50%, #AA8524 100%) !important;
+      color: #000000 !important;
+      box-shadow: 
+        0 6px 20px rgba(212, 175, 55, 0.3),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .dark-theme .registration-section .submit-button:hover {
+      background: linear-gradient(135deg, #FFE07D 0%, #E6C24A 50%, #C49C2C 100%) !important;
+      box-shadow: 
+        0 10px 25px rgba(212, 175, 55, 0.45),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.5) !important;
+    }
+
+    @media (max-width: 950px) {
+      .form-page-split {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+      .registration-info {
+        text-align: center;
+        max-width: 100% !important;
+      }
+      .registration-info div {
+        text-align: left;
+      }
+      .left-panels-collage {
+        max-width: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo-container">
+      <div class="logo-circle">
+        <img src="refer/Logo_new_output1.png" alt="TND Logo" style="width: 100%; height: 100%; object-fit: contain;">
+      </div>
+      <span>THE NEW DEMOCRACY</span>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="home.html" class="nav-link">Home</a></li>
+      <li><a href="home.html#about" class="nav-link">About Us</a></li>
+      <li><a href="home.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="#register-form" class="nav-btn">
+        REGISTER NOW <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon theme-toggle-icon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Form Content Section -->
+  <section class="registration-section" style="padding: 140px 5% 100px; position: relative; min-height: calc(100vh - 85px); z-index: 2;">
+    <!-- Pinterest Style Glowing Blobs -->
+    <div class="bg-blob-1"></div>
+    <div class="bg-blob-2"></div>
+
+    <div class="form-page-split" style="position: relative; z-index: 5;">
+      
+      <!-- Left Side: Collaged 3D Panels matching Pinterest layout (Simplified Text) -->
+      <div class="left-panels-collage" style="display: flex; flex-direction: column; gap: 30px; flex: 1.2; width: 100%;">
+        
+        <!-- Top Row: Main Intro Panel & Diagonal Overlapping Accent Diamond -->
+        <div style="display: flex; gap: 24px; width: 100%; flex-wrap: wrap;">
+          
+          <!-- Card A: White Panel (Simplified) -->
+          <div class="layout-panel-3d panel-intro-3d" style="flex: 1.3; min-width: 280px; display: flex; flex-direction: column; justify-content: center; min-height: 200px;">
+            <h1 style="color: var(--primary-dark); font-size: 2.3rem; margin: 0 0 10px; line-height: 1.2; font-family: var(--font-heading);">
+              TND <br><span style="color: #00a8b5;">Vision</span>
+            </h1>
+            <p style="color: var(--primary-dark); opacity: 0.85; font-size: 0.98rem; line-height: 1.5; font-family: var(--font-sans); margin: 0;">
+              Establishing a merit-driven, competent generation of public servants.
+            </p>
+          </div>
+
+          <!-- Card B: Overlapping Diagonal Green Diamond Accent (Simplified) -->
+          <div class="diamond-panel-3d" style="flex: 1; min-width: 220px; display: flex; flex-direction: column; justify-content: center; min-height: 200px;">
+            <div>
+              <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-metallic);">Vision Colors</span>
+              <h3 style="font-size: 1.4rem; margin: 10px 0 10px; font-weight: 800; font-family: var(--font-heading); color: #ffffff; line-height: 1.2;">Leadership</h3>
+            </div>
+            <p style="font-size: 0.88rem; opacity: 0.9; margin: 0; line-height: 1.4; font-family: var(--font-sans);">
+              Prepare today to lead tomorrow's democratic frameworks with data and integrity.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Bottom Row: 3D Status Pills Panel (Simplified & Decorative) -->
+        <div style="display: flex; gap: 24px; width: 100%;">
+          
+          <!-- Card C: Orange Accent Panel with 3D status capsules -->
+          <div class="accent-orange-panel" style="flex: 1; min-width: 280px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin: 0 0 15px; font-family: var(--font-sans); color: #ffffff; letter-spacing: 0.5px;">Admissions Status</h4>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <div class="glossy-pill-3d white">
+                <i class="fa-solid fa-check-double" style="color: #2ecc71; font-size: 0.9rem;"></i>
+                <span>Application Active</span>
+              </div>
+              <div class="glossy-pill-3d green">
+                <i class="fa-solid fa-graduation-cap" style="font-size: 0.9rem;"></i>
+                <span>Modules Loaded</span>
+              </div>
+              <div class="glossy-pill-3d">
+                <i class="fa-solid fa-user-shield" style="font-size: 0.9rem;"></i>
+                <span>Verified Entry</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      
+      <!-- Right Side: Neumorphic / Skeuomorphic 3D Registration Form Card -->
+      <div class="registration-form-card" id="register-form" style="max-width: 500px; width: 100%; flex: 1;">
+        <h3 class="form-title" style="font-family: var(--font-heading);">Apply Now</h3>
+        <form id="enrollment-form" class="enrollment-form">
+          <div class="form-group">
+            <label for="full-name">FULL NAME *</label>
+            <input type="text" id="full-name" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email-address">EMAIL ADDRESS *</label>
+            <input type="email" id="email-address" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone-number">PHONE NUMBER (OPTIONAL)</label>
+            <div style="display: flex; gap: 8px; align-items: center; width: 100%;">
+              <span class="phone-prefix">+91</span>
+              <input type="tel" id="phone-number" placeholder="Enter 10-digit number" pattern="[0-9]{10}" maxlength="10" minlength="10" style="flex-grow: 1; min-width: 0;" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>GENDER *</label>
+            <div class="gender-btn-group">
+              <button type="button" class="gender-btn" data-value="male" aria-label="Male"><i class="fa-solid fa-mars" style="font-size: 1.25rem;"></i></button>
+              <button type="button" class="gender-btn" data-value="female" aria-label="Female"><i class="fa-solid fa-venus" style="font-size: 1.25rem;"></i></button>
+              <button type="button" class="gender-btn" data-value="others" aria-label="Others"><i class="fa-solid fa-transgender" style="font-size: 1.25rem;"></i></button>
+            </div>
+            <input type="hidden" id="gender-input" name="gender" required>
+          </div>
+
+          <div class="form-group">
+            <label for="city-location">CITY / LOCATION *</label>
+            <select id="city-location" required>
+              <option value="" disabled selected>Select a city</option>
+              <option value="chennai">Chennai</option>
+              <option value="coimbatore">Coimbatore</option>
+              <option value="madurai">Madurai</option>
+              <option value="trichy">Trichy (Tiruchirappalli)</option>
+              <option value="salem">Salem</option>
+              <option value="tirunelveli">Tirunelveli</option>
+              <option value="vellore">Vellore</option>
+              <option value="erode">Erode</option>
+              <option value="thoothukudi">Thoothukudi</option>
+              <option value="nagercoil">Nagercoil</option>
+              <option value="thanjavur">Thanjavur</option>
+              <option value="dindigul">Dindigul</option>
+              <option value="ranipet">Ranipet</option>
+              <option value="sivakasi">Sivakasi</option>
+              <option value="karur">Karur</option>
+              <option value="ooty">Udhagamandalam (Ooty)</option>
+              <option value="kancheepuram">Kancheepuram</option>
+              <option value="tiruppur">Tiruppur</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="select-course">SELECT PROGRAM MODULE *</label>
+            <select id="select-course" required>
+              <option value="" disabled selected>Choose a module</option>
+              <option value="beginners">THE BEGINNERS MODULE</option>
+              <option value="leadership">CIVIC LEADERSHIP STRATEGY</option>
+              <option value="campaign">CAMPAIGN & ELECTION MANAGEMENT</option>
+              <option value="policy">PUBLIC POLICY & DESIGN</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sop">WHY DO YOU WANT TO JOIN TND? (OPTIONAL)</label>
+            <textarea id="sop" rows="3" placeholder="Share your motivation and goals"></textarea>
+          </div>
+          
+          <button type="submit" class="submit-button" style="font-family: var(--font-heading);">Submit Application</button>
+          <div id="form-feedback" class="form-feedback-alert" style="font-family: var(--font-sans);">Enrolled Successfully! We will contact you shortly.</div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-wrapper" id="contact">
+    
+    <!-- Top banner banner -->
+    <div class="footer-top-banner" style="justify-content: center; text-align: center;">
+      <div class="footer-top-banner-content">
+        <h2 style="margin-bottom: 0;">BE A PART OF THE CHANGE</h2>
+      </div>
+    </div>
+
+    <!-- Main Columns -->
+    <div class="footer-main-columns">
+      
+      <!-- Contact Info -->
+      <div class="footer-col-contact">
+        <h3>GET IN TOUCH</h3>
+        <ul class="footer-contact-list">
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 94453 90910</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>hello@thenewdemocracy.in</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Chennai, Tamil Nadu, India</span>
+          </li>
+        </ul>
+        
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook" class="social-icon-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+          </a>
+          <a href="#" aria-label="Twitter X" class="social-icon-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M20 20l-6.768 -6.768"></path></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-icon-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col-links">
+        <div class="footer-links-subcol">
+          <h4>INITIATIVE</h4>
+          <ul class="footer-link-list">
+            <li><a href="home.html#pli-offers">PLI Focus</a></li>
+            <li><a href="home.html#curriculum">Beginners Module</a></li>
+            <li><a href="home.html#lifecycle">Growth Lifecycle</a></li>
+            <li><a href="form.html">Registration</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-subcol">
+          <h4>ORGANIZATION</h4>
+          <ul class="footer-link-list">
+            <li><a href="home.html#about">About Us</a></li>
+            <li><a href="home.html#contact">Contact Info</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium Quote Column -->
+      <div class="footer-quote-container">
+        <div class="quote-ornament">&ldquo;</div>
+        <blockquote class="premium-quote">
+          Be the change you wish to see in the world.
+        </blockquote>
+        <cite class="quote-author">&mdash; Mahatma Gandhi</cite>
+      </div>
+
+    </div>
+
+    <!-- Bottom metadata -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 The New Democracy. All rights reserved.</p>
+      <div class="footer-meta-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Engagement</a>
+        <a href="#">Contact Support</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919445390910" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to Top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="scroll-top-icon">
+          <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+  </button>
+
+  <!-- Interactive Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // Gender Button Select Handler
+    const genderBtns = document.querySelectorAll('.gender-btn');
+    const genderInput = document.getElementById('gender-input');
+    
+    genderBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        genderBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        genderInput.value = btn.getAttribute('data-value');
+      });
+    });
+
+    // Handle Form Submission & Custom Validations
+    const form = document.getElementById('enrollment-form');
+    const feedback = document.getElementById('form-feedback');
+    
+    if (form && feedback) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // 1. Email ID validation (must contain @)
+        const email = document.getElementById('email-address').value;
+        if (!email.includes('@')) {
+          alert('Please enter a valid email address containing "@".');
+          return;
+        }
+
+        // 2. Phone validation (Optional but if entered, must be exactly 10 digits)
+        const phone = document.getElementById('phone-number').value;
+        if (phone && phone.length !== 10) {
+          alert('Phone number must be exactly 10 digits.');
+          return;
+        }
+
+        // 3. Gender validation (Compulsory)
+        if (!genderInput.value) {
+          alert('Please select a gender.');
+          return;
+        }
+
+        // Display success feedback
+        feedback.style.display = 'block';
+        feedback.innerText = "Enrolled Successfully! We will contact you shortly.";
+        
+        form.reset();
+        genderBtns.forEach(b => b.classList.remove('active'));
+        genderInput.value = '';
+        
+        setTimeout(() => {
+          feedback.style.display = 'none';
+        }, 5000);
+      });
+    }
+  </script>
+</body>
+</html>
